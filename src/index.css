@@ -5289,27 +5289,22 @@ figure {
     }
 
     .work-hero-image {
-        width: 100%;
+        width: 440px;
+        display: block;
     }
 
     .overflow-icon-left {
-        display: block;
-        position: absolute;
+        z-index: 5;
         width: 80px;
-        height: auto;
+        position: absolute;
         bottom: -8%;
         right: 9%;
-        z-index: 5;
     }
 
     .overflow-icon-right {
-        display: block;
-        position: absolute;
-        width: 80px;
-        height: auto;
-        top: -5%;
-        left: 18%;
         z-index: 5;
+        width: 80px;
+        position: absolute;
     }
 
     .hero-overflow-left-image,
