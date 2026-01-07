@@ -4902,10 +4902,13 @@ figure {
 
     .section.page-hero {
         margin-top: 0 !important;
-        padding-top: 12px !important;
-        padding-bottom: 60px;
+        padding-top: 80px !important;
+        padding-bottom: 40px !important;
+        min-height: auto !important;
+        height: auto !important;
         display: flex !important;
         flex-direction: column !important;
+        overflow: visible !important;
     }
 
     .section.light-grey-hero {
@@ -4956,14 +4959,17 @@ figure {
         flex-direction: column;
         width: 100%;
         max-width: 100%;
+        min-height: auto;
+        overflow: visible;
     }
 
     .home-hero-text-box {
         order: -1;
-        margin-bottom: 40px;
+        margin-bottom: 24px;
         position: relative;
         z-index: 10;
         width: 100%;
+        padding: 0 16px;
     }
 
     .column._11-column,
@@ -5246,27 +5252,40 @@ figure {
         display: block;
         position: relative;
         inset: auto;
-        margin: 0 auto 20px auto;
-        width: 100%;
-        max-width: 100%;
+        margin: 0 auto 12px auto;
+        width: 70%;
+        max-width: 250px;
         height: auto;
+        overflow: visible;
     }
 
     .hero-overflow-right-image {
         display: block;
         position: relative;
         inset: auto;
-        margin: 0 auto 20px auto;
-        width: 100%;
-        max-width: 100%;
+        margin: 0 auto 12px auto;
+        width: 70%;
+        max-width: 250px;
         height: auto;
+        overflow: visible;
     }
 
     .hero-overflow-left-image img,
     .hero-overflow-right-image img {
         width: 100%;
         height: auto;
+        max-height: 150px;
         object-fit: contain;
+        display: block;
+    }
+
+    .work-grey-box {
+        padding: 20px;
+        overflow: visible;
+    }
+
+    .hero-work-white-insert {
+        overflow: visible;
     }
 
     .work-hero-image {
