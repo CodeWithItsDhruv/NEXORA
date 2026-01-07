@@ -4897,7 +4897,7 @@ figure {
 
     .section.page-hero {
         margin-top: 0 !important;
-        padding-top: 150px !important;
+        padding-top: 180px !important;
         padding-bottom: 60px;
     }
 
@@ -5272,16 +5272,17 @@ figure {
     }
 
     .contact-card {
-        padding-right: 40px;
+        padding-bottom: 24px;
+        padding-left: 30px;
+        padding-right: 30px;
+        overflow: hidden;
     }
 
     .contact-us-ticket {
-        width: auto;
-        max-width: 110%;
-        margin-top: -64px;
-        margin-bottom: -24px;
-        position: relative;
-        bottom: 0;
+        max-width: 100%;
+        margin-bottom: 0;
+        right: 0;
+        position: static;
     }
 
     .glass-icon {
