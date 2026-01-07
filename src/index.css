@@ -5272,7 +5272,7 @@ figure {
 
     .hero-overflow-left-image img,
     .hero-overflow-right-image img {
-        width: 100%;
+        /* width: 100%; */
         height: auto;
         max-height: 150px;
         object-fit: contain;
@@ -5289,22 +5289,28 @@ figure {
     }
 
     .work-hero-image {
-        width: 440px;
+        width: 100%;
         display: block;
     }
 
+    /* Purple Icon - Bottom Left */
     .overflow-icon-left {
         z-index: 5;
-        width: 80px;
+        width: 60px;
         position: absolute;
-        bottom: -8%;
-        right: 9%;
+        bottom: 130px;
+        left: -10px;
+        right: auto;
     }
 
+    /* Black Icon - Top Right */
     .overflow-icon-right {
         z-index: 5;
-        width: 80px;
+        width: 60px;
         position: absolute;
+        top: 130px;
+        right: -10px;
+        left: auto;
     }
 
     .hero-overflow-left-image,
