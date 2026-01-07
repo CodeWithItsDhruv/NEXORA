@@ -6,6 +6,7 @@ html {
 
 body {
     margin: 0;
+    overflow-x: hidden;
 }
 
 article,
@@ -5204,15 +5205,11 @@ figure {
     }
 
     .hero-overflow-left-image {
-        width: 53%;
-        margin-left: 0;
-        inset: 78vh 53% auto auto;
+        display: none;
     }
 
     .hero-overflow-right-image {
-        width: 53%;
-        margin-right: 0;
-        inset: 80vh auto auto 53%;
+        display: none;
     }
 
     .work-hero-image {
@@ -5432,7 +5429,7 @@ figure {
 
     .hero-overflow-left-image,
     .hero-overflow-right-image {
-        width: 65%;
+        display: none;
     }
 
     .work-grey-box {
