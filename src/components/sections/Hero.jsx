@@ -25,9 +25,9 @@ const Hero = () => {
                     </div>
                 </div>
                 <div className="home-hero-text-box">
-                    <h1 className="heading h1-l">Reach More Buyers. <span className="home-underline-link">Sell</span> More Properties.</h1>
+                    <h1 className="heading h1-l">Grow Your Business. <span className="home-underline-link">Dominate</span> Your Market.</h1>
                     <div className="text-box center-align">
-                        <p className="paragraph x-large _64-opacity">Maximise your Real Estate growth. We help developers and realtors generate high-quality leads using powerful content and video marketing.</p>
+                        <p className="paragraph x-large _64-opacity">Full-service digital marketing that drives real results. From SEO to paid ads, we help businesses scale with data-driven strategies and creative execution.</p>
                         <div className="spacer _24 mobile-small"></div>
                     </div>
                     <div className="hero-button-group">

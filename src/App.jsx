@@ -20,6 +20,10 @@ import Blog from './pages/Blog';
 import Post1 from './pages/blog/Post1';
 import Post2 from './pages/blog/Post2';
 import Post3 from './pages/blog/Post3';
+import Post4 from './pages/blog/Post4';
+import Post5 from './pages/blog/Post5';
+import Post6 from './pages/blog/Post6';
+import ThemeSwitcher from './components/common/ThemeSwitcher';
 
 function App() {
     const [path, setPath] = useState(window.location.pathname);
@@ -75,12 +79,18 @@ function App() {
         Component = Terms;
     } else if (path === '/blog') {
         Component = Blog;
-    } else if (path === '/blog/digital-marketing-real-estate') {
+    } else if (path === '/blog/ai-campaign-strategy') {
         Component = Post1;
-    } else if (path === '/blog/performance-marketing') {
+    } else if (path === '/blog/content-creation-branding') {
         Component = Post2;
-    } else if (path === '/blog/seo-real-estate') {
+    } else if (path === '/blog/performance-marketing') {
         Component = Post3;
+    } else if (path === '/blog/seo-google-updates') {
+        Component = Post4;
+    } else if (path === '/blog/ai-automation') {
+        Component = Post5;
+    } else if (path === '/blog/social-media-importance') {
+        Component = Post6;
     } else {
         Component = NotFound;
     }
@@ -91,6 +101,7 @@ function App() {
             <Navbar />
             <Component />
             <Footer />
+            <ThemeSwitcher />
         </>
     );
 }

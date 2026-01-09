@@ -53,21 +53,14 @@ const Logo = ({ variant = 'standard', color = 'currentColor', className = '' }) 
     }
 
     // Default 'standard' (Icon + Name)
+    // Now using the single name_logo.png asset
     return (
-        <div className={`logo-standard ${className}`} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <div style={{ width: '40px', height: '40px' }}>
-                <LogoImage />
-            </div>
-            <span style={{
-                fontFamily: '"Domine", "serif"',
-                fontWeight: '700',
-                fontSize: '24px',
-                letterSpacing: '1px',
-                color: color,
-                textTransform: 'uppercase'
-            }}>
-                Nexora
-            </span>
+        <div className={`logo-standard ${className}`} style={{ display: 'flex', alignItems: 'center' }}>
+            <img
+                src="/assets/name-logo.png"
+                alt="Nexora"
+                style={{ height: '30px', width: 'auto', objectFit: 'contain' }}
+            />
         </div>
     );
 };

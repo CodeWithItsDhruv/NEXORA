@@ -6,46 +6,36 @@ const Post3 = () => {
     return (
         <div>
             <PageHero
-                title="SEO for Real Estate: Dominate Local Search"
-                subtitle="When buyers search '3BHK in Mumbai', do they find you or your competitor? Own the top spot."
-                breadcrumb="Home / Blog / SEO"
+                title="Performance Marketing: A Results-Driven Approach to Growth"
+                subtitle="Stop paying for vanity metrics. Focus on clicks, leads, and sales that actually drive revenue."
+                breadcrumb="Home / Blog / Performance"
             />
 
             <div className="section">
                 <div className="container w-container" style={{ maxWidth: '800px' }}>
                     <div style={{ fontSize: '18px', lineHeight: '1.8', color: '#334155' }}>
                         <p style={{ marginBottom: '30px' }}>
-                            Real Estate is inherently local. You aren't competing with the whole world; you are competing with other projects in your pincode. Yet, most developers ignore <strong>Local SEO</strong>.
+                            Unlike traditional marketing, performance marketing is all about real outcomes like clicks, leads, and sales. You only pay for actual results—not vanity metrics like impressions or likes.
                         </p>
 
-                        <h2 className="heading h3" style={{ marginTop: '40px', marginBottom: '20px' }}>The "Near Me" Phenomenon</h2>
+                        <h2 className="heading h3" style={{ marginTop: '40px', marginBottom: '20px' }}>1. Data-Driven Decisions</h2>
                         <p style={{ marginBottom: '20px' }}>
-                            Search queries including "near me" or specific localities (e.g., "Flats in Bandra West") have exploded. Google Maps is often the first place a buyer looks.
+                            Performance marketing relies heavily on data. Every campaign is tracked, measured, and analyzed. This allows marketers to make informed decisions about where to allocate budget for the highest return on investment (ROI).
                         </p>
-                        <ul style={{ marginBottom: '30px', paddingLeft: '20px' }}>
-                            <li style={{ marginBottom: '10px' }}><strong>Google Business Profile:</strong> Is it verified? Do you have 5-star reviews? Are the photos updated?</li>
-                            <li style={{ marginBottom: '10px' }}><strong>Local Keywords:</strong> Your website content must mention landmarks, stations, and local hubs.</li>
-                        </ul>
 
-                        <h2 className="heading h3" style={{ marginTop: '40px', marginBottom: '20px' }}>Building Authority with Content</h2>
+                        <h2 className="heading h3" style={{ marginTop: '40px', marginBottom: '20px' }}>2. Pay for Performance</h2>
                         <p style={{ marginBottom: '20px' }}>
-                            SEO isn't just about keywords; it's about trust.
+                            The core principle is simple: if it doesn't perform, you don't pay (or you stop paying). This model incentivizes agencies and platforms to deliver tangible business results rather than just exposure.
                         </p>
+
+                        <h2 className="heading h3" style={{ marginTop: '40px', marginBottom: '20px' }}>3. Highly Scalable</h2>
                         <p style={{ marginBottom: '20px' }}>
-                            Instead of just "Buy Now", publish content that helps the buyer:
-                        </p>
-                        <ul style={{ marginBottom: '30px', paddingLeft: '20px' }}>
-                            <li>"Is [Location] a good investment in 2026?"</li>
-                            <li>"Price trends in [City] over the last 5 years"</li>
-                            <li>"RERA Checklist for new buyers"</li>
-                        </ul>
-                        <p>
-                            When you answer their questions, you become the authority. When they are ready to buy, they trust you.
+                            Once a winning campaign is identified—one that acquires customers at a profitable cost—it can be scaled up aggressively. You know exactly how much revenue each dollar of ad spend generates.
                         </p>
 
                         <div style={{ marginTop: '50px', padding: '30px', backgroundColor: '#eff6ff', borderRadius: '12px' }}>
-                            <h3 className="heading h4">Long-Term Asset</h3>
-                            <p style={{ marginBottom: '0' }}>Ads stop working the moment you stop paying. SEO builds a digital asset that drives free, high-intent traffic for years.</p>
+                            <h3 className="heading h4">Key Takeaway</h3>
+                            <p style={{ marginBottom: '0' }}>Don't just spend budget; invest it. Performance marketing ensures every penny works hard to bring in new business.</p>
                         </div>
                     </div>
                 </div>

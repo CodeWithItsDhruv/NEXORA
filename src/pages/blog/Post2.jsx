@@ -6,45 +6,36 @@ const Post2 = () => {
     return (
         <div>
             <PageHero
-                title="Performance Marketing: Selling Luxury Homes"
-                subtitle="Stop paying for vanity metrics. Discover how to acquire high-intent leads that actually convert."
-                breadcrumb="Home / Blog / Paid Ads"
+                title="Content Creation & Branding: The Backbone of Modern Marketing"
+                subtitle="In today's fast-paced world, attention is the currency. Your brand needs to stand out."
+                breadcrumb="Home / Blog / Branding"
             />
 
             <div className="section">
                 <div className="container w-container" style={{ maxWidth: '800px' }}>
                     <div style={{ fontSize: '18px', lineHeight: '1.8', color: '#334155' }}>
                         <p style={{ marginBottom: '30px' }}>
-                            In the luxury real estate market, 'Brand Awareness' is a trap. You don't need a million people to know your project; you need the <strong>fifty people who can afford it</strong> to book a site visit. That is Performance Marketing.
+                            In today's fast-paced world, attention is what people value most. Brands compete on how they are seen and the personality they show. Content creation and branding are essential to capture this attention.
                         </p>
 
-                        <h2 className="heading h3" style={{ marginTop: '40px', marginBottom: '20px' }}>The "Pay for Results" Mindset</h2>
+                        <h2 className="heading h3" style={{ marginTop: '40px', marginBottom: '20px' }}>1. Visual Storytelling</h2>
                         <p style={{ marginBottom: '20px' }}>
-                            Traditional agencies focus on Reach and Impressions. We focus on <strong>CPL (Cost Per Lead)</strong> and <strong>CPV (Cost Per Visit)</strong>. Every rupee spent on ads must have a measurable return.
+                            A picture is worth a thousand words, and a video is worth a million. Brands that tell compelling visual stories connect deeper with their audience. It's not just about selling a product; it's about selling a lifestyle and a feeling.
                         </p>
 
-                        <h2 className="heading h3" style={{ marginTop: '40px', marginBottom: '20px' }}>Structuring a Luxury Campaign</h2>
+                        <h2 className="heading h3" style={{ marginTop: '40px', marginBottom: '20px' }}>2. Brand Consistency</h2>
                         <p style={{ marginBottom: '20px' }}>
-                            Selling a ₹5 Cr apartment requires a different funnel than affordable housing.
+                            Consistency breeds familiarity, and familiarity breeds trust. From your logo to your tone of voice on social media, every touchpoint should reflect your core brand identity. This builds a unified image in the customer's mind.
                         </p>
-                        <div style={{ display: 'grid', gap: '20px', marginBottom: '30px' }}>
-                            <div style={{ background: '#f8fafc', padding: '20px', borderRadius: '8px', border: '1px solid #e2e8f0' }}>
-                                <h4 className="heading h5" style={{ marginBottom: '10px', color: '#3b82f6' }}>1. The Hook (High Friction)</h4>
-                                <p style={{ fontSize: '16px', margin: 0 }}>Don't use easy forms. Use long forms asking for tailored investment goals. This filters out window shoppers.</p>
-                            </div>
-                            <div style={{ background: '#f8fafc', padding: '20px', borderRadius: '8px', border: '1px solid #e2e8f0' }}>
-                                <h4 className="heading h5" style={{ marginBottom: '10px', color: '#3b82f6' }}>2. The Exclusivity</h4>
-                                <p style={{ fontSize: '16px', margin: 0 }}>Market it as "By Invitation Only" or "Priority Access". Luxury buyers value exclusivity over discounts.</p>
-                            </div>
-                            <div style={{ background: '#f8fafc', padding: '20px', borderRadius: '8px', border: '1px solid #e2e8f0' }}>
-                                <h4 className="heading h5" style={{ marginBottom: '10px', color: '#3b82f6' }}>3. The Retargeting</h4>
-                                <p style={{ fontSize: '16px', margin: 0 }}>They won't buy on day one. Retarget them with testimonial videos, construction updates, and investment analysis reports.</p>
-                            </div>
-                        </div>
+
+                        <h2 className="heading h3" style={{ marginTop: '40px', marginBottom: '20px' }}>3. Building Trust</h2>
+                        <p style={{ marginBottom: '20px' }}>
+                            Consumers are skeptical. They buy from brands they trust. High-quality, educational, and authentic content establishes your authority in the industry and proves that you are here to help, not just to sell.
+                        </p>
 
                         <div style={{ marginTop: '50px', padding: '30px', backgroundColor: '#eff6ff', borderRadius: '12px' }}>
-                            <h3 className="heading h4">Data is King</h3>
-                            <p style={{ marginBottom: '0' }}>We track everything. If a keyword generates clicks but no site visits, we kill it. If a creative brings high-quality leads, we double the budget.</p>
+                            <h3 className="heading h4">Key Takeaway</h3>
+                            <p style={{ marginBottom: '0' }}>Your brand is what people say about you when you're not in the room. Make sure you influence that conversation with powerful content.</p>
                         </div>
                     </div>
                 </div>

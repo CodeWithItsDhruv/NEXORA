@@ -305,7 +305,7 @@ html.w-mod-touch * {
     color: #fff;
     line-height: inherit;
     cursor: pointer;
-    background-color: #3898ec;
+    background-color: var(--blue);
     border: 0;
     border-radius: 0;
     padding: 9px 15px;
@@ -584,7 +584,7 @@ label {
 
 .w-input:focus,
 .w-select:focus {
-    border-color: #3898ec;
+    border-color: var(--blue);
     outline: 0;
 }
 
@@ -2184,6 +2184,17 @@ textarea.w-select {
     --light-blue: #a5d7ff;
 }
 
+body.theme-royal-blue {
+    --blue: #3259f3;
+    --dark-blue: #002bd8;
+    --light-blue: #4c6ef4;
+    --soft-blue: #e6efff;
+    --back-cream: #ffffff;
+    --back-silver: #f4f6fb;
+    --black: #0a1020;
+    --dark-black: #000000;
+}
+
 .w-layout-grid {
     grid-row-gap: 16px;
     grid-column-gap: 16px;
@@ -2226,16 +2237,16 @@ textarea.w-select {
 }
 
 .w-checkbox-input--inputType-custom.w--redirected-checked {
-    background-color: #3898ec;
+    background-color: var(--blue);
     background-image: url("https://d3e54v103j8qbb.cloudfront.net/static/custom-checkbox-checkmark.589d534424.svg");
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
-    border-color: #3898ec;
+    border-color: var(--blue);
 }
 
 .w-checkbox-input--inputType-custom.w--redirected-focus {
-    box-shadow: 0 0 3px 1px #3898ec;
+    box-shadow: 0 0 3px 1px var(--blue);
 }
 
 .w-form-formradioinput--inputType-custom {
@@ -2246,12 +2257,12 @@ textarea.w-select {
 }
 
 .w-form-formradioinput--inputType-custom.w--redirected-focus {
-    box-shadow: 0 0 3px 1px #3898ec;
+    box-shadow: 0 0 3px 1px var(--blue);
 }
 
 .w-form-formradioinput--inputType-custom.w--redirected-checked {
     border-width: 4px;
-    border-color: #3898ec;
+    border-color: var(--blue);
 }
 
 body {
@@ -4089,7 +4100,7 @@ figure {
 
 .nav-button.primary {
     color: #fff;
-    background-color: #007cff;
+    background-color: var(--blue);
     background-image: linear-gradient(0deg, #0000001a, #0000);
     border-radius: 12px;
     margin-left: 0;
@@ -4105,7 +4116,7 @@ figure {
 }
 
 .nav-button.primary:active {
-    background-color: #144fb8;
+    background-color: var(--dark-blue);
     transform: translate(0, 1px);
     box-shadow: 0 0 #f0eee8;
 }
@@ -5720,4 +5731,220 @@ h6,
 
 .spacer._40 {
     height: 40px;
+}
+
+/* Theme Switcher Styles */
+.theme-switcher-fab {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--blue);
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.theme-switcher-fab:hover {
+    transform: scale(1.1);
+}
+
+.theme-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.theme-icon.royal {
+    background-color: white;
+}
+
+.theme-icon.default {
+    background-color: transparent;
+}
+
+
+body.theme-royal-blue .nav-bar {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* Footer Pro Refactored Styles */
+.footer-pro {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 80px 5%;
+    font-family: Inter, sans-serif;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.footer-brand-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 2;
+}
+
+.brand-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-brand-logo {
+    width: 40px;
+    height: auto;
+    filter: invert(1);
+    transition: filter 0.3s;
+}
+
+/* Invert logo in Dark Theme (if we had one) or rely on variables if svg. 
+   For now, we handle background color change, so logo might need invert if back is dark.
+   But Royal Blue theme has white background, so standard logo is fine.
+*/
+
+.brand-name {
+    font-family: Domine, serif;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.brand-description {
+    color: var(--soft-grey);
+    line-height: 1.6;
+    max-width: 300px;
+}
+
+.social-icons-wrapper {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-link {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.footer-links-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-heading {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--white);
+}
+
+.footer-link-item {
+    color: var(--soft-grey);
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.2s;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.footer-link-item:hover {
+    color: var(--blue);
+}
+
+.newsletter-text {
+    color: var(--soft-grey);
+    font-size: 14px;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.newsletter-input {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid var(--silver);
+    background-color: var(--white);
+    color: var(--black);
+    width: 100%;
+}
+
+.newsletter-button {
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    background-color: var(--blue);
+    color: var(--white);
+    font-weight: 600;
+    cursor: pointer;
+    font-family: Outfit, sans-serif;
+}
+
+.footer-bottom-bar {
+    border-top: 1px solid #ffffff1a;
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    font-size: 14px;
+    color: var(--soft-grey);
+    transition: border-top-color 0.3s;
+}
+
+.copyright-text {
+    color: var(--soft-grey);
+}
+
+.legal-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.legal-link {
+    color: var(--soft-grey);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+    margin-bottom: 0;
+}
+
+.legal-link:hover {
+    color: var(--blue);
+}
+
+/* Blog Page Styles */
+.blog-title-link:hover {
+    color: var(--blue) !important;
+}
+
+.read-more-link:hover {
+    gap: 12px !important;
 }

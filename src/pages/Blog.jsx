@@ -5,68 +5,102 @@ import PreFooterCTA from '../components/sections/PreFooterCTA';
 const Blog = () => {
     const posts = [
         {
-            title: "Why Digital Marketing Is Essential in Real Estate (2026)",
-            category: "Strategy",
-            date: "Jan 5, 2026",
-            excerpt: "90% of property buyers start their journey online. Learn why relying on newspapers and billboards is costing you sales.",
-            image: "/assets/real_estate.png",
-            link: "/blog/digital-marketing-real-estate"
+            title: "How AI Agents Are Reshaping Campaign Strategy in 2026",
+            excerpt: "Artificial Intelligence is no longer just a supporting tool in digital marketing—it has become the mainstay of modern campaigns. Discover how AI is changing the way brands plan, run, and optimize their digital presence.",
+            link: "/blog/ai-campaign-strategy"
         },
         {
-            title: "Performance Marketing: Selling Luxury Homes",
-            category: "Paid Ads",
-            date: "Dec 28, 2025",
-            excerpt: "Stop paying for 'brand awareness'. Discover how intent-based targeting on Meta & Google delivers high-net-worth leads.",
-            image: "/assets/process.png",
+            title: "Content Creation & Branding: The Backbone of Modern Marketing",
+            excerpt: "In today's fast-paced world, attention is what people value most. Brands compete on how they are seen and the personality they show. Learn why content creation and branding are essential.",
+            link: "/blog/content-creation-branding"
+        },
+        {
+            title: "Performance Marketing: A Results-Driven Approach to Growth",
+            excerpt: "Unlike traditional marketing, performance marketing is all about real outcomes like clicks, leads, and sales. You only pay for actual results—not vanity metrics.",
             link: "/blog/performance-marketing"
         },
         {
-            title: "SEO for Real Estate: Dominate Local Search",
-            category: "SEO",
-            date: "Dec 15, 2025",
-            excerpt: "When buyers search '3BHK in [City]', do they find you? Integrating local SEO is the key to organic walkthroughs.",
-            image: "/assets/tools.png",
-            link: "/blog/seo-real-estate"
+            title: "SEO & Google Updates: The Complete Guide to Staying Ahead in 2025",
+            excerpt: "SEO is evolving faster than ever. With AI-generated content and shifting user behavior, Google continues to reshape how it ranks websites. Stay ahead with this complete guide.",
+            link: "/blog/seo-google-updates"
+        },
+        {
+            title: "AI & Automation in Marketing: Redefining the Digital Landscape",
+            excerpt: "The world of digital marketing is changing super fast. AI-powered marketing isn't just a choice anymore—it's the new standard. From content creation to data analysis, discover the future.",
+            link: "/blog/ai-automation"
+        },
+        {
+            title: "The Importance of Social Media Marketing: Why Every Business Needs It",
+            excerpt: "Social media isn't optional anymore. It's where your customers spend their time, discover brands, and make purchase decisions. Learn how to leverage it effectively.",
+            link: "/blog/social-media-importance"
         }
     ];
 
     return (
         <div>
             <PageHero
-                title="Insights & Trends"
-                subtitle="Expert perspectives on the shifting landscape of Real Estate marketing."
+                title="Blog"
+                subtitle="Insights, strategies, and trends in digital marketing."
                 breadcrumb="Home / Blog"
             />
 
-            <div className="section">
+            <div className="section" style={{ paddingTop: '80px', paddingBottom: '80px' }}>
                 <div className="container w-container">
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '40px' }}>
+                    <div style={{
+                        display: 'grid',
+                        gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))',
+                        gap: '48px',
+                        maxWidth: '1200px',
+                        margin: '0 auto'
+                    }}>
                         {posts.map((post, i) => (
-                            <a href={post.link} key={i} data-aos="fade-up" data-aos-delay={i * 100} style={{
-                                display: 'block',
-                                borderRadius: '16px',
-                                overflow: 'hidden',
-                                border: '1px solid #e2e8f0',
-                                transition: 'all 0.3s ease',
-                                textDecoration: 'none',
-                                color: 'inherit'
-                            }} className="blog-card">
-                                <div style={{ height: '240px', overflow: 'hidden' }}>
-                                    <img src={post.image} alt={post.title} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }} />
-                                </div>
-                                <div style={{ padding: '32px' }}>
-                                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '16px', fontSize: '14px', color: '#64748b' }}>
-                                        <span style={{ fontWeight: '600', color: '#3b82f6', textTransform: 'uppercase', letterSpacing: '0.5px' }}>{post.category}</span>
-                                        <span>{post.date}</span>
-                                    </div>
-                                    <h3 className="heading h4" style={{ marginBottom: '12px', lineHeight: '1.4', color: '#10212e' }}>{post.title}</h3>
-                                    <p className="paragraph" style={{ fontSize: '15px', color: '#475569', display: '-webkit-box', WebkitLineClamp: '3', WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{post.excerpt}</p>
-                                    <div style={{ marginTop: '24px', fontWeight: '600', color: '#3b82f6', display: 'flex', alignItems: 'center' }}>
-                                        Read Article
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ marginLeft: '8px' }}><path d="M5 12h14"></path><path d="M12 5l7 7-7 7"></path></svg>
-                                    </div>
-                                </div>
-                            </a>
+                            <article key={i} data-aos="fade-up" data-aos-delay={i * 50} style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                borderBottom: '1px solid #e2e8f0',
+                                paddingBottom: '32px'
+                            }}>
+                                <h3 style={{
+                                    fontSize: '22px',
+                                    fontWeight: '600',
+                                    lineHeight: '1.4',
+                                    marginBottom: '16px',
+                                    color: 'var(--black)'
+                                }}>
+                                    <a href={post.link} style={{
+                                        color: 'inherit',
+                                        textDecoration: 'none',
+                                        transition: 'color 0.2s'
+                                    }} className="blog-title-link">
+                                        {post.title}
+                                    </a>
+                                </h3>
+                                <p style={{
+                                    fontSize: '16px',
+                                    lineHeight: '1.6',
+                                    color: '#475569',
+                                    marginBottom: '16px',
+                                    flex: 1
+                                }}>
+                                    {post.excerpt}
+                                </p>
+                                <a href={post.link} style={{
+                                    fontSize: '14px',
+                                    color: 'var(--blue)',
+                                    textDecoration: 'none',
+                                    fontWeight: '500',
+                                    display: 'inline-flex',
+                                    alignItems: 'center',
+                                    gap: '8px',
+                                    transition: 'gap 0.2s'
+                                }} className="read-more-link">
+                                    Read More
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                        <path d="M5 12h14"></path>
+                                        <path d="M12 5l7 7-7 7"></path>
+                                    </svg>
+                                </a>
+                            </article>
                         ))}
                     </div>
                 </div>

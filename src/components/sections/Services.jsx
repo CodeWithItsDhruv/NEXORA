@@ -13,58 +13,58 @@ const Services = () => {
                 </div>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '32px' }}>
-                    {/* Service 1: Website Development */}
+                    {/* Service 1: SEO Optimization */}
                     <div className="service-card" style={cardStyle} data-aos="fade-up" data-aos-delay="100">
                         <div style={iconContainerStyle}>
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
                         </div>
-                        <h3 className="heading h5" style={{ fontFamily: '"Outfit", sans-serif', marginTop: '20px', marginBottom: '12px' }}>Real Estate Web Development</h3>
-                        <p className="paragraph" style={{ fontSize: '15px', lineHeight: '1.6', color: '#475569' }}>High-converting property listing sites and landing pages for new launches.</p>
+                        <h3 className="heading h5" style={{ fontFamily: '"Outfit", sans-serif', marginTop: '20px', marginBottom: '12px' }}>SEO Optimization</h3>
+                        <p className="paragraph" style={{ fontSize: '15px', lineHeight: '1.6', color: '#475569' }}>Rank higher on Google with technical SEO, content optimization, and link building strategies that drive organic traffic.</p>
                     </div>
 
-                    {/* Service 2: Video Shoot & Edit */}
+                    {/* Service 2: Paid Advertising */}
                     <div className="service-card" style={cardStyle} data-aos="fade-up" data-aos-delay="200">
-                        <div style={iconContainerStyle}>
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M23 7l-7 5 7 5V7z"></path><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
-                        </div>
-                        <h3 className="heading h5" style={{ fontFamily: '"Outfit", sans-serif', marginTop: '20px', marginBottom: '12px' }}>Property Video Shoots</h3>
-                        <p className="paragraph" style={{ fontSize: '15px', lineHeight: '1.6', color: '#475569' }}>Drone cinematography, 4K walkthroughs, and reels that sell the lifestyle.</p>
-                    </div>
-
-                    {/* Service 3: Digital Marketing */}
-                    <div className="service-card" style={cardStyle} data-aos="fade-up" data-aos-delay="300">
                         <div style={iconContainerStyle}>
                             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M23 6l-9.5 9.5-5-5L1 18"></path><path d="M17 6h6v6"></path></svg>
                         </div>
-                        <h3 className="heading h5" style={{ fontFamily: '"Outfit", sans-serif', marginTop: '20px', marginBottom: '12px' }}>Real Estate Marketing</h3>
-                        <p className="paragraph" style={{ fontSize: '15px', lineHeight: '1.6', color: '#475569' }}>Laser-targeted lead generation campaigns for developers and brokers.</p>
+                        <h3 className="heading h5" style={{ fontFamily: '"Outfit", sans-serif', marginTop: '20px', marginBottom: '12px' }}>Paid Advertising (PPC)</h3>
+                        <p className="paragraph" style={{ fontSize: '15px', lineHeight: '1.6', color: '#475569' }}>Google Ads, Facebook Ads, and LinkedIn campaigns that maximize ROI with laser-targeted audience reach.</p>
                     </div>
 
-                    {/* Service 4: Website Maintenance */}
+                    {/* Service 3: Social Media Marketing */}
+                    <div className="service-card" style={cardStyle} data-aos="fade-up" data-aos-delay="300">
+                        <div style={iconContainerStyle}>
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        </div>
+                        <h3 className="heading h5" style={{ fontFamily: '"Outfit", sans-serif', marginTop: '20px', marginBottom: '12px' }}>Social Media Marketing</h3>
+                        <p className="paragraph" style={{ fontSize: '15px', lineHeight: '1.6', color: '#475569' }}>Build your brand presence on Instagram, LinkedIn, and Facebook with engaging content and community management.</p>
+                    </div>
+
+                    {/* Service 4: Content Marketing */}
                     <div className="service-card" style={cardStyle} data-aos="fade-up" data-aos-delay="400">
                         <div style={iconContainerStyle}>
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
                         </div>
-                        <h3 className="heading h5" style={{ fontFamily: '"Outfit", sans-serif', marginTop: '20px', marginBottom: '12px' }}>Site Maintenance</h3>
-                        <p className="paragraph" style={{ fontSize: '15px', lineHeight: '1.6', color: '#475569' }}>Ensuring your project details and pricing are always up-to-date and secure.</p>
+                        <h3 className="heading h5" style={{ fontFamily: '"Outfit", sans-serif', marginTop: '20px', marginBottom: '12px' }}>Content Marketing</h3>
+                        <p className="paragraph" style={{ fontSize: '15px', lineHeight: '1.6', color: '#475569' }}>Blog articles, video scripts, and infographics that educate, engage, and convert your audience.</p>
                     </div>
 
-                    {/* Service 5: Graphic Design */}
+                    {/* Service 5: Web Development */}
                     <div className="service-card" style={cardStyle} data-aos="fade-up" data-aos-delay="500">
                         <div style={iconContainerStyle}>
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
                         </div>
-                        <h3 className="heading h5" style={{ fontFamily: '"Outfit", sans-serif', marginTop: '20px', marginBottom: '12px' }}>Creative Branding</h3>
-                        <p className="paragraph" style={{ fontSize: '15px', lineHeight: '1.6', color: '#475569' }}>Project brochures, hoardings, and social media creatives that capture attention.</p>
+                        <h3 className="heading h5" style={{ fontFamily: '"Outfit", sans-serif', marginTop: '20px', marginBottom: '12px' }}>Web Development</h3>
+                        <p className="paragraph" style={{ fontSize: '15px', lineHeight: '1.6', color: '#475569' }}>High-converting websites and landing pages built with modern technologies and optimized for performance.</p>
                     </div>
 
-                    {/* Service 6: Resource Hiring */}
+                    {/* Service 6: Analytics & Reporting */}
                     <div className="service-card" style={cardStyle} data-aos="fade-up" data-aos-delay="600">
                         <div style={iconContainerStyle}>
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
                         </div>
-                        <h3 className="heading h5" style={{ fontFamily: '"Outfit", sans-serif', marginTop: '20px', marginBottom: '12px' }}>Hire Dedicated Team</h3>
-                        <p className="paragraph" style={{ fontSize: '15px', lineHeight: '1.6', color: '#475569' }}>Augment your sales office with dedicated digital marketers and designers.</p>
+                        <h3 className="heading h5" style={{ fontFamily: '"Outfit", sans-serif', marginTop: '20px', marginBottom: '12px' }}>Analytics & Reporting</h3>
+                        <p className="paragraph" style={{ fontSize: '15px', lineHeight: '1.6', color: '#475569' }}>Data-driven insights with detailed reporting dashboards to track performance and optimize campaigns.</p>
                     </div>
                 </div>
             </div>
