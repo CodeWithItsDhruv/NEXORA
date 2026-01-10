@@ -46,7 +46,7 @@ const Process = () => {
 
                     {/* Image Column (Right) - Constrained Width */}
                     <div className="image-wrapper" data-aos="fade-left" style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.08)', maxWidth: '450px', width: '100%', margin: '0 auto' }}>
-                        <img src="/assets/process.png" alt="Digital Marketing Process" style={{ width: '100%', height: 'auto', display: 'block' }} />
+                        <img src="/assets/process_chart.png" alt="Digital Marketing Process" style={{ width: '100%', height: 'auto', display: 'block' }} />
                         <div style={{ padding: '12px', background: '#fff', textAlign: 'center', fontSize: '13px', color: '#666', borderTop: '1px solid #eee' }}>
                             Digital Marketing Process
                         </div>

@@ -13,7 +13,7 @@ const Insights = () => {
                     <div role="list" className="insights-grid w-dyn-items">
                         <div role="listitem" className="w-dyn-item">
                             <a href="/blog/ai-campaign-strategy" className="news-block w-inline-block">
-                                <div className="insight-thumbnail"><img alt="Vision Behind Nexora" loading="lazy" width="808" src="https://cdn.prod.website-files.com/67fe35102e4bd72b706f7dda/67fe35102e4bd72b706f7ef0_60f0d068b0443a185645f679_good-skin-club-ni7gy570MMU-unsplash.avif"
+                                <div className="insight-thumbnail"><img alt="AI in Digital Marketing" loading="lazy" width="808" src="/assets/blog_ai_marketing.png"
                                     className="image-cover" /></div>
                                 <div className="news-info">
                                     <div className="thumbnail-project-tag-link">
@@ -26,7 +26,7 @@ const Insights = () => {
                         </div>
                         <div role="listitem" className="w-dyn-item">
                             <a href="/blog/seo-google-updates" className="news-block w-inline-block">
-                                <div className="insight-thumbnail"><img alt="Digital Marketing Trends" loading="lazy" width="808" src="https://cdn.prod.website-files.com/67fe35102e4bd72b706f7dda/68889453ade38939c6a4406b_claudio-schwarz-77ruI1Fed3o-unsplash.avif"
+                                <div className="insight-thumbnail"><img alt="SEO Optimization" loading="lazy" width="808" src="/assets/blog_seo_2026.png"
                                     className="image-cover" /></div>
                                 <div className="news-info">
                                     <div className="thumbnail-project-tag-link">
@@ -39,7 +39,7 @@ const Insights = () => {
                         </div>
                         <div role="listitem" className="w-dyn-item">
                             <a href="/blog/content-creation-branding" className="news-block w-inline-block">
-                                <div className="insight-thumbnail"><img alt="Success Story" loading="lazy" width="808" src="https://cdn.prod.website-files.com/67fe35102e4bd72b706f7dda/67fe35102e4bd72b706f7eee_60fa06139493140dd445fe76_batch-by-wisconsin-hemp-scientific-YDG-4FTsZN8-unsplash.avif"
+                                <div className="insight-thumbnail"><img alt="Content Strategy" loading="lazy" width="808" src="/assets/blog_content_planning.png"
                                     className="image-cover" /></div>
                                 <div className="news-info">
                                     <div className="thumbnail-project-tag-link">

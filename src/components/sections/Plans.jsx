@@ -1,67 +1,71 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Plans = () => {
     const plans = [
         {
-            name: "Basic",
-            price: "$1,500",
-            period: "/mo",
-            description: "Essential tools to establish your online presence.",
+            name: "Basic Package",
+            price: "₹9,999",
+            period: "/month",
+            description: "Essential social media presence for small businesses.",
             features: [
-                "Basic SEO Setup",
-                "Google Business Opt.",
-                "1 Social Platform",
-                "Monthly Report",
-                "Email Support"
+                "Account setup and optimization for 2 platforms",
+                "8-10 posts / month (graphics and captions included)",
+                "Monthly performance tracking",
+                "Basic engagement management",
+                "Page Optimization"
             ],
             buttonText: "Start Basic",
             highlight: false
         },
         {
-            name: "Standard",
-            price: "$2,500",
-            period: "/mo",
-            description: "Consistent content to keep your audience engaged.",
+            name: "Standard Package",
+            price: "₹24,999",
+            period: "/month",
+            description: "Growth-focused management with boosted reach.",
             features: [
-                "Advanced SEO Strategy",
-                "2 Blog Posts/mo",
-                "2 Social Platforms",
-                "Weekly Posting",
-                "Bi-weekly Reports"
+                "Management of up to 3-4 platforms",
+                "12-16 posts per month with boosted ad campaigns",
+                "Reels / Short videos (2-4)",
+                "Basic Ad Management (Client Ad budget Extra)",
+                "Lead Generation Setup (Basic)",
+                "Advanced analytics and growth insights"
             ],
             buttonText: "Go Standard",
             highlight: false
         },
         {
-            name: "Growth",
-            price: "$4,000",
-            period: "/mo",
-            description: "Aggressive strategies to dominate your market.",
+            name: "Premium Package",
+            price: "₹44,999",
+            period: "/month",
+            description: "Comprehensive management for serious brand scaling.",
             features: [
-                "Complete SEO Suite",
-                "4 Blog Posts/mo",
-                "All Social Platforms",
-                "Paid Ads Management",
-                "Video Content Strategy",
-                "Priority Support"
+                "End-to-end social media management for 6 platforms",
+                "30+ posts / month with targeted ad campaigns",
+                "Influencer collaboration and outreach Reels",
+                "Facebook & Instagram Ads (Management)",
+                "Lead Funnel Setup",
+                "WhatsApp / CRM Integration (Basic)",
+                "24/7 account monitoring and customer support"
             ],
-            buttonText: "Choose Growth",
+            buttonText: "Choose Premium",
             highlight: true
         },
         {
-            name: "Custom",
-            price: "Custom",
-            period: "",
-            description: "Tailored solutions for large-scale operations.",
+            name: "Enterprise / Custom",
+            price: "₹59,999",
+            period: "/month",
+            description: "Full-scale dedicated digital partnership.",
             features: [
+                "End-to-end social media management for All platforms",
+                "30+ posts / month with targeted ad campaigns",
+                "Paid Ads (Meta Google)",
+                "Influencer Marketing collaboration strategy",
+                "Website / Landing Page Optimization",
                 "Dedicated Account Manager",
-                "Custom Dev Projects",
-                "24/7 Priority Access",
-                "Brand Consulting",
-                "Multi-location SEO",
-                "Performance Guarantees"
+                "Advance Analytics & Reporting"
             ],
-            buttonText: "Contact Us",
+            buttonText: "Contact Sales",
             highlight: false
         }
     ];
@@ -86,7 +90,7 @@ const Plans = () => {
                     alignItems: 'stretch'
                 }}>
                     {plans.map((plan, index) => (
-                        <div key={index} style={{
+                        <div key={index} className={`plan-card ${plan.highlight ? 'featured' : ''}`} style={{
                             backgroundColor: plan.highlight ? '#10212e' : '#f8fafc',
                             color: plan.highlight ? '#ffffff' : '#10212e',
                             padding: '30px', // Slightly less padding for fit
@@ -136,26 +140,48 @@ const Plans = () => {
                                 ))}
                             </ul>
 
-                            <a href="#contact" style={{
-                                display: 'block',
-                                textAlign: 'center',
-                                padding: '12px 20px',
-                                borderRadius: '6px',
-                                backgroundColor: plan.highlight ? '#3b82f6' : '#10212e',
-                                color: '#ffffff',
-                                textDecoration: 'none',
-                                fontWeight: '600',
-                                fontSize: '14px',
-                                transition: 'background-color 0.2s',
-                                marginTop: 'auto'
-                            }}>
-                                {plan.buttonText}
-                            </a>
+                            {index < 2 ? (
+                                <Link to="/contact"
+                                    style={{
+                                        display: 'block',
+                                        textAlign: 'center',
+                                        padding: '12px 20px',
+                                        borderRadius: '6px',
+                                        backgroundColor: plan.highlight ? '#3b82f6' : '#10212e',
+                                        color: '#ffffff',
+                                        textDecoration: 'none',
+                                        fontWeight: '600',
+                                        fontSize: '14px',
+                                        transition: 'background-color 0.2s',
+                                        marginTop: 'auto'
+                                    }}>
+                                    {plan.buttonText}
+                                </Link>
+                            ) : (
+                                <a href={`https://wa.me/919904256613?text=Hi,%20I'm%20interested%20in%20the%20${encodeURIComponent(plan.name)}%20for%20${encodeURIComponent(plan.price)}.`}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    style={{
+                                        display: 'block',
+                                        textAlign: 'center',
+                                        padding: '12px 20px',
+                                        borderRadius: '6px',
+                                        backgroundColor: plan.highlight ? '#3b82f6' : '#10212e',
+                                        color: '#ffffff',
+                                        textDecoration: 'none',
+                                        fontWeight: '600',
+                                        fontSize: '14px',
+                                        transition: 'background-color 0.2s',
+                                        marginTop: 'auto'
+                                    }}>
+                                    {plan.buttonText}
+                                </a>
+                            )}
                         </div>
                     ))}
                 </div>
                 <div style={{ marginTop: '50px', textAlign: 'center' }}>
-                    <p style={{ color: '#64748b' }}>Need something specific? <a href="#contact" style={{ color: '#3b82f6', textDecoration: 'none', fontWeight: '600' }}>Talk to an expert.</a></p>
+                    <p style={{ color: '#64748b' }}>Need something specific? <Link to="/contact" style={{ color: '#3b82f6', textDecoration: 'none', fontWeight: '600' }}>Talk to an expert.</Link></p>
                 </div>
             </div>
         </div>

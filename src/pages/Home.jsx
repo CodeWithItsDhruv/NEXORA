@@ -13,9 +13,15 @@ import EarlyOffer from '../components/sections/EarlyOffer';
 import FAQ from '../components/sections/FAQ';
 import PreFooterCTA from '../components/sections/PreFooterCTA';
 
+import SEO from '../components/common/SEO';
+
 const Home = () => {
     return (
         <>
+            <SEO
+                title="Growth-Driven Digital Marketing"
+                description="Nexora helps real estate and B2B businesses scale with data-driven SEO, content marketing, and paid ad strategies."
+            />
             <Hero />
             <Values />
             <Trust />

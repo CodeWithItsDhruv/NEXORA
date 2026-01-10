@@ -38,7 +38,7 @@ const ServiceContent = () => {
                             </ul>
                         </div>
                         <div data-aos="fade-left" className="image-wrapper" style={{ borderRadius: '16px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}>
-                            <img src="/assets/process.png" alt="Content Planning" style={{ width: '100%', display: 'block' }} />
+                            <img src="/assets/blog_content_planning.png" alt="Content Planning" style={{ width: '100%', display: 'block' }} />
                         </div>
                     </div>
                 </div>

@@ -1,7 +1,34 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import PageHero from '../components/common/PageHero';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+    const form = useRef();
+    const [isLoading, setIsLoading] = useState(false);
+    const [isSubmitted, setIsSubmitted] = useState(false);
+    const [error, setError] = useState(null);
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+        setIsLoading(true);
+        setError(null);
+
+        // Access credentials from environment variables
+        const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+        const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+        const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
+            .then((result) => {
+                console.log(result.text);
+                setIsLoading(false);
+                setIsSubmitted(true);
+            }, (error) => {
+                console.log(error.text);
+                setIsLoading(false);
+                setError('Something went wrong. Please try again later or email us directly.');
+            });
+    };
     return (
         <div>
             <PageHero
@@ -63,32 +90,76 @@ const Contact = () => {
                             border: '1px solid #f1f5f9'
                         }}>
                             <h3 className="heading h4" style={{ marginBottom: '24px' }}>Send us a message</h3>
-                            <form>
-                                <div style={{ marginBottom: '20px' }}>
-                                    <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500', fontSize: '14px', color: '#334155' }}>Full Name</label>
-                                    <input type="text" className="text-field w-input" placeholder="John Doe" style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #cbd5e1' }} />
+                            {!isSubmitted ? (
+                                <form ref={form} onSubmit={sendEmail}>
+                                    <div style={{ marginBottom: '20px' }}>
+                                        <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500', fontSize: '14px', color: '#334155' }}>Full Name</label>
+                                        <input type="text" name="user_name" required className="text-field w-input" placeholder="John Doe" style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #cbd5e1' }} />
+                                    </div>
+                                    <div style={{ marginBottom: '20px' }}>
+                                        <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500', fontSize: '14px', color: '#334155' }}>Email Address</label>
+                                        <input type="email" name="user_email" required className="text-field w-input" placeholder="john@company.com" style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #cbd5e1' }} />
+                                    </div>
+                                    <div style={{ marginBottom: '20px' }}>
+                                        <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500', fontSize: '14px', color: '#334155' }}>Phone Number</label>
+                                        <input type="tel" name="contact_number" className="text-field w-input" placeholder="+91 98765 43210" style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #cbd5e1' }} />
+                                    </div>
+                                    <div style={{ marginBottom: '20px' }}>
+                                        <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500', fontSize: '14px', color: '#334155' }}>Company Name</label>
+                                        <input type="text" name="company_name" className="text-field w-input" placeholder="Your Business Ltd." style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #cbd5e1' }} />
+                                    </div>
+                                    <div style={{ marginBottom: '20px' }}>
+                                        <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500', fontSize: '14px', color: '#334155' }}>Service Interest</label>
+                                        <select name="service_interest" className="text-field w-select" style={{
+                                            width: '100%',
+                                            padding: '12px 16px',
+                                            borderRadius: '8px',
+                                            border: '1px solid #cbd5e1',
+                                            backgroundColor: '#fff',
+                                            color: '#334155',
+                                            fontSize: '16px',
+                                            outline: 'none'
+                                        }}>
+                                            <option value="Not Specified">Select a service...</option>
+                                            <option value="SEO">SEO Optimization</option>
+                                            <option value="Content">Content Marketing</option>
+                                            <option value="Social">Social Media</option>
+                                            <option value="Ads">Paid Advertising</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div style={{ marginBottom: '24px' }}>
+                                        <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500', fontSize: '14px', color: '#334155' }}>Message</label>
+                                        <textarea name="message" required className="text-field w-input" placeholder="Tell us about your project..." style={{ width: '100%', minHeight: '120px', padding: '12px 16px', borderRadius: '8px', border: '1px solid #cbd5e1' }}></textarea>
+                                    </div>
+                                    <button
+                                        type="submit"
+                                        disabled={isLoading}
+                                        className="button w-button"
+                                        style={{
+                                            width: '100%',
+                                            border: 'none',
+                                            borderRadius: '8px',
+                                            padding: '14px',
+                                            fontSize: '16px',
+                                            opacity: isLoading ? 0.7 : 1,
+                                            cursor: isLoading ? 'not-allowed' : 'pointer'
+                                        }}
+                                    >
+                                        {isLoading ? 'Sending...' : 'Send Message'}
+                                    </button>
+                                    {error && <p style={{ color: '#ef4444', marginTop: '10px', fontSize: '14px' }}>{error}</p>}
+                                </form>
+                            ) : (
+                                <div style={{ textAlign: 'center', padding: '40px 0' }}>
+                                    <div style={{ width: '60px', height: '60px', background: '#dcfce7', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px auto', color: '#16a34a' }}>
+                                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                    </div>
+                                    <h3 className="heading h4">Message Sent!</h3>
+                                    <p className="paragraph" style={{ marginBottom: '20px' }}>Thanks for reaching out. We'll get back to you within 24 hours.</p>
+                                    <button onClick={() => setIsSubmitted(false)} style={{ background: 'none', border: 'none', color: '#3b82f6', textDecoration: 'underline', cursor: 'pointer' }}>Send another message</button>
                                 </div>
-                                <div style={{ marginBottom: '20px' }}>
-                                    <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500', fontSize: '14px', color: '#334155' }}>Email Address</label>
-                                    <input type="email" className="text-field w-input" placeholder="john@company.com" style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #cbd5e1' }} />
-                                </div>
-                                <div style={{ marginBottom: '20px' }}>
-                                    <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500', fontSize: '14px', color: '#334155' }}>Service Interest</label>
-                                    <select className="text-field w-select" style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #cbd5e1' }}>
-                                        <option value="">Select a service...</option>
-                                        <option value="SEO">SEO Optimization</option>
-                                        <option value="Content">Content Marketing</option>
-                                        <option value="Social">Social Media</option>
-                                        <option value="Ads">Paid Advertising</option>
-                                        <option value="Other">Other</option>
-                                    </select>
-                                </div>
-                                <div style={{ marginBottom: '24px' }}>
-                                    <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500', fontSize: '14px', color: '#334155' }}>Message</label>
-                                    <textarea className="text-field w-input" placeholder="Tell us about your project..." style={{ width: '100%', minHeight: '120px', padding: '12px 16px', borderRadius: '8px', border: '1px solid #cbd5e1' }}></textarea>
-                                </div>
-                                <button type="submit" className="button w-button" style={{ width: '100%', border: 'none', borderRadius: '8px', padding: '14px', fontSize: '16px' }}>Send Message</button>
-                            </form>
+                            )}
                         </div>
                     </div>
                 </div>

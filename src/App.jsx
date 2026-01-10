@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import './index.css';
 import Banner from './components/common/Banner';
 import Navbar from './components/common/Navbar';
@@ -9,26 +10,28 @@ import NotFound from './pages/NotFound';
 import About from './pages/About';
 import Work from './pages/Work';
 import Contact from './pages/Contact';
-import ServiceSEO from './pages/services/SEO';
-import ServiceContent from './pages/services/Content';
-import ServiceSocial from './pages/services/Social';
-import ServiceAds from './pages/services/Ads';
-import Privacy from './pages/Privacy';
-import Terms from './pages/Terms';
-import Blog from './pages/Blog';
+const ServiceSEO = React.lazy(() => import('./pages/services/SEO'));
+const ServiceContent = React.lazy(() => import('./pages/services/Content'));
+const ServiceSocial = React.lazy(() => import('./pages/services/Social'));
+const ServiceAds = React.lazy(() => import('./pages/services/Ads'));
+const Privacy = React.lazy(() => import('./pages/Privacy'));
+const Terms = React.lazy(() => import('./pages/Terms'));
+const Blog = React.lazy(() => import('./pages/Blog'));
 
-import Post1 from './pages/blog/Post1';
-import Post2 from './pages/blog/Post2';
-import Post3 from './pages/blog/Post3';
-import Post4 from './pages/blog/Post4';
-import Post5 from './pages/blog/Post5';
-import Post6 from './pages/blog/Post6';
-import ThemeSwitcher from './components/common/ThemeSwitcher';
+const Post1 = React.lazy(() => import('./pages/blog/Post1'));
+const Post2 = React.lazy(() => import('./pages/blog/Post2'));
+const Post3 = React.lazy(() => import('./pages/blog/Post3'));
+const Post4 = React.lazy(() => import('./pages/blog/Post4'));
+const Post5 = React.lazy(() => import('./pages/blog/Post5'));
+const Post6 = React.lazy(() => import('./pages/blog/Post6'));
 
 function App() {
-    const [path, setPath] = useState(window.location.pathname);
+    const location = useLocation();
 
     useEffect(() => {
+        // Scroll to top on route change
+        window.scrollTo(0, 0);
+
         // Initialize Webflow after React has rendered the DOM
         if (window.Webflow) {
             window.Webflow.destroy();
@@ -54,54 +57,36 @@ function App() {
         };
         initAOS();
 
-    }, [path]);
-
-    let Component;
-    if (path === '/' || path === '/index.html') {
-        Component = Home;
-    } else if (path === '/about') {
-        Component = About;
-    } else if (path === '/work') {
-        Component = Work;
-    } else if (path === '/contact') {
-        Component = Contact;
-    } else if (path === '/services/seo') {
-        Component = ServiceSEO;
-    } else if (path === '/services/content') {
-        Component = ServiceContent;
-    } else if (path === '/services/social') {
-        Component = ServiceSocial;
-    } else if (path === '/services/ads') {
-        Component = ServiceAds;
-    } else if (path === '/privacy') {
-        Component = Privacy;
-    } else if (path === '/terms') {
-        Component = Terms;
-    } else if (path === '/blog') {
-        Component = Blog;
-    } else if (path === '/blog/ai-campaign-strategy') {
-        Component = Post1;
-    } else if (path === '/blog/content-creation-branding') {
-        Component = Post2;
-    } else if (path === '/blog/performance-marketing') {
-        Component = Post3;
-    } else if (path === '/blog/seo-google-updates') {
-        Component = Post4;
-    } else if (path === '/blog/ai-automation') {
-        Component = Post5;
-    } else if (path === '/blog/social-media-importance') {
-        Component = Post6;
-    } else {
-        Component = NotFound;
-    }
+    }, [location]);
 
     return (
         <>
             <Banner />
             <Navbar />
-            <Component />
+            <React.Suspense fallback={<div className="loading-spinner" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>Loading...</div>}>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/index.html" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/work" element={<Work />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/services/seo" element={<ServiceSEO />} />
+                    <Route path="/services/content" element={<ServiceContent />} />
+                    <Route path="/services/social" element={<ServiceSocial />} />
+                    <Route path="/services/ads" element={<ServiceAds />} />
+                    <Route path="/privacy" element={<Privacy />} />
+                    <Route path="/terms" element={<Terms />} />
+                    <Route path="/blog" element={<Blog />} />
+                    <Route path="/blog/ai-campaign-strategy" element={<Post1 />} />
+                    <Route path="/blog/content-creation-branding" element={<Post2 />} />
+                    <Route path="/blog/performance-marketing" element={<Post3 />} />
+                    <Route path="/blog/seo-google-updates" element={<Post4 />} />
+                    <Route path="/blog/ai-automation" element={<Post5 />} />
+                    <Route path="/blog/social-media-importance" element={<Post6 />} />
+                    <Route path="*" element={<NotFound />} />
+                </Routes>
+            </React.Suspense>
             <Footer />
-            <ThemeSwitcher />
         </>
     );
 }

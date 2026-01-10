@@ -38,7 +38,7 @@ const ServiceSocial = () => {
                             </ul>
                         </div>
                         <div data-aos="fade-left" className="image-wrapper" style={{ borderRadius: '16px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}>
-                            <img src="/assets/real_estate.png" alt="Social Media Growth" style={{ width: '100%', display: 'block' }} />
+                            <img src="/assets/social_growth.png" alt="Social Media Growth" style={{ width: '100%', display: 'block' }} />
                         </div>
                     </div>
                 </div>

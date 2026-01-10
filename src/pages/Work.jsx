@@ -22,7 +22,7 @@ const Work = () => {
 
             <div className="section light-grey">
                 <div className="container w-container">
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '40px' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '40px' }}>
                         {projects.map((p, i) => (
                             <div key={i} data-aos="fade-up" data-aos-delay={i * 100} className="work-card" style={{
                                 backgroundColor: '#fff',

@@ -12,7 +12,7 @@ const Services = () => {
                     </p>
                 </div>
 
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '32px' }}>
+                <div className="services-grid-container">
                     {/* Service 1: SEO Optimization */}
                     <div className="service-card" style={cardStyle} data-aos="fade-up" data-aos-delay="100">
                         <div style={iconContainerStyle}>
