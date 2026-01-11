@@ -2,7 +2,7 @@ import React from 'react';
 
 const EarlyOffer = () => {
     return (
-        <div className="section" style={{ backgroundColor: '#10212e', color: '#ffffff', padding: '80px 0' }}>
+        <div className="section early-offer-section" style={{ backgroundColor: '#10212e', color: '#ffffff', padding: '80px 0' }}>
             <div className="container w-container">
                 <div className="text-box _720px center-align" style={{ margin: '0 auto', textAlign: 'center' }}>
                     <div className="title-tag" style={{ color: '#60a5fa', borderColor: 'rgba(255,255,255,0.2)' }}>Limited Opportunity</div>

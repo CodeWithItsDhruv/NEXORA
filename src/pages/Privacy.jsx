@@ -42,7 +42,7 @@ const Privacy = () => {
 
                         <h3 className="heading h4" style={{ marginTop: '30px', marginBottom: '15px' }}>5. Contact Us</h3>
                         <p style={{ marginBottom: '20px' }}>
-                            If you have any questions about this privacy policy or our privacy practices, please contact us at <a href="mailto:privacy@nexora.com" style={{ color: '#3b82f6' }}>privacy@nexora.com</a>.
+                            If you have any questions about this privacy policy or our privacy practices, please contact us at <a href="mailto:help@nexora-digital.in" style={{ color: '#3b82f6' }}>help@nexora-digital.in</a>.
                         </p>
                     </div>
                 </div>

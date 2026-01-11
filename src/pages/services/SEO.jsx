@@ -1,6 +1,7 @@
 import React from 'react';
 import PageHero from '../../components/common/PageHero';
 import PreFooterCTA from '../../components/sections/PreFooterCTA';
+import SEO from '../../components/common/SEO';
 
 const ServiceSEO = () => {
     return (
@@ -9,6 +10,10 @@ const ServiceSEO = () => {
                 title="Search Engine Optimization"
                 subtitle="Dominating search results isn't magic. It's engineering. We help you rank higher to capture intent-driven traffic."
                 breadcrumb="Home / Services / SEO"
+            />
+            <SEO
+                title="SEO Services | Rank Higher on Google with Nexora"
+                description="Expert SEO services to help your business dominate search results. Technical audits, content strategy, and authority building."
             />
 
             {/* Problem / Solution Section */}

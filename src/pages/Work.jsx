@@ -1,48 +1,103 @@
 import React from 'react';
 import PageHero from '../components/common/PageHero';
 import PreFooterCTA from '../components/sections/PreFooterCTA';
+import SEO from '../components/common/SEO';
 
 const Work = () => {
     const projects = [
-        { title: "Luxury Villa Campaign", category: "Paid Ads", stats: "450% ROI" },
-        { title: "Skyline Towers website", category: "Web Design", stats: "2x Conversion" },
-        { title: "Urban Living Social", category: "Social Media", stats: "50k Reach" },
-        { title: "Green Valley SEO", category: "SEO", stats: "#1 Ranking" },
-        { title: "Harbor Point Launch", category: "Content", stats: "10k Views" },
-        { title: "Elite Estates Brand", category: "Branding", stats: "New Launch" }
+        {
+            category: "SEO",
+            title: "SaaS Organic Growth Architecture",
+            result: "Scalable Keyword Dominance Strategy",
+            desc: "Technical Audit & Content Silo Framework",
+            image: "/assets/work_seo.png"
+        },
+        {
+            category: "Paid Ads",
+            title: "High-Ticket Lead Acquisition",
+            result: "Conversion-Focused Funnel Optimization",
+            desc: "Meta & Google Ads Integration",
+            image: "/assets/work_ads.png"
+        },
+        {
+            category: "Social Media",
+            title: "Brand Authority & Engagement",
+            result: "Community-Driven Content Strategy",
+            desc: "Visual Identity & Narrative Building",
+            image: "/assets/work_social.png"
+        },
+        {
+            category: "Web Design",
+            title: "User-Centric Digital Experience",
+            result: "Frictionless UX/UI Interface Design",
+            desc: "Mobile-First Responsive Architecture",
+            image: "/assets/work_web.png"
+        },
+        {
+            category: "Content",
+            title: "Thought Leadership Ecosystem",
+            result: "Authority Building & Lead Nurturing",
+            desc: "Blog, Email & Whitepaper Strategy",
+            image: "/assets/work_content.png"
+        },
+        {
+            category: "Branding",
+            title: "Corporate Identity System",
+            result: "Cohesive Cross-Channel Visual Language",
+            desc: "Logo, Typography & Asset Guidelines",
+            image: "/assets/work_branding.png"
+        }
     ];
 
     return (
         <div>
             <PageHero
                 title="Our Work"
-                subtitle="Results speak louder than promises. Here are some of the success stories we've crafted for our clients."
+                subtitle="Strategic solutions designed for digital growth and market leadership."
                 breadcrumb="Home / Company / Work"
+            />
+            <SEO
+                title="Our Work | Nexora Digital Marketing"
+                description="Explore our portfolio of digital marketing strategies and success stories. See how we help businesses grow."
             />
 
             <div className="section light-grey">
                 <div className="container w-container">
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '40px' }}>
+
+                    <div className="text-box center-align" style={{ maxWidth: '800px', margin: '0 auto 60px auto', textAlign: 'center' }}>
+                        <p className="paragraph" style={{ fontStyle: 'italic', color: '#64748b' }}>
+                            We’re currently working with early-stage brands and local businesses. Our first case studies and results will be published soon.
+                        </p>
+                    </div>
+
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '40px' }}>
                         {projects.map((p, i) => (
                             <div key={i} data-aos="fade-up" data-aos-delay={i * 100} className="work-card" style={{
                                 backgroundColor: '#fff',
                                 borderRadius: '16px',
                                 overflow: 'hidden',
                                 boxShadow: '0 10px 30px rgba(0,0,0,0.05)',
-                                transition: 'transform 0.3s ease'
+                                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                                cursor: 'default'
                             }}>
                                 <div style={{
                                     height: '240px',
-                                    backgroundColor: '#cbd5e1',
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    color: '#64748b',
-                                    fontSize: '14px',
-                                    textTransform: 'uppercase',
-                                    letterSpacing: '1px'
+                                    backgroundColor: '#f8fafc',
+                                    overflow: 'hidden',
+                                    position: 'relative'
                                 }}>
-                                    Project Image Placeholder
+                                    <img
+                                        src={p.image}
+                                        alt={p.title}
+                                        style={{
+                                            width: '100%',
+                                            height: '100%',
+                                            objectFit: 'cover',
+                                            transition: 'transform 0.5s ease'
+                                        }}
+                                        onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+                                        onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+                                    />
                                 </div>
                                 <div style={{ padding: '30px' }}>
                                     <div style={{
@@ -54,14 +109,25 @@ const Work = () => {
                                         fontSize: '12px',
                                         fontWeight: '600',
                                         marginBottom: '16px',
-                                        textTransform: 'uppercase'
+                                        textTransform: 'uppercase',
+                                        letterSpacing: '0.5px'
                                     }}>
                                         {p.category}
                                     </div>
-                                    <h3 className="heading h4" style={{ marginBottom: '12px' }}>{p.title}</h3>
-                                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                                        <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#22c55e' }}></div>
-                                        <div style={{ fontSize: '16px', fontWeight: '600', color: '#1e293b' }}>{p.stats}</div>
+                                    <h3 className="heading h4" style={{ marginBottom: '8px', fontSize: '20px' }}>{p.title}</h3>
+                                    <div style={{ fontSize: '15px', color: '#64748b', marginBottom: '16px', lineHeight: '1.5' }}>
+                                        {p.result}
+                                    </div>
+                                    <div style={{
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        paddingTop: '16px',
+                                        borderTop: '1px solid #f1f5f9',
+                                        fontSize: '14px',
+                                        color: '#94a3b8',
+                                        fontWeight: '500'
+                                    }}>
+                                        <span style={{ marginRight: '8px' }}>⚡</span> {p.desc}
                                     </div>
                                 </div>
                             </div>

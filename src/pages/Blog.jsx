@@ -1,6 +1,7 @@
 import React from 'react';
 import PageHero from '../components/common/PageHero';
 import PreFooterCTA from '../components/sections/PreFooterCTA';
+import SEO from '../components/common/SEO';
 
 const Blog = () => {
     const posts = [
@@ -42,6 +43,10 @@ const Blog = () => {
                 title="Blog"
                 subtitle="Insights, strategies, and trends in digital marketing."
                 breadcrumb="Home / Blog"
+            />
+            <SEO
+                title="Nexora Blog | Digital Marketing Insights, Trends & Strategies"
+                description="Stay ahead with the latest digital marketing insights. Read our articles on SEO, AI, content strategy, and more."
             />
 
             <div className="section" style={{ paddingTop: '80px', paddingBottom: '80px' }}>

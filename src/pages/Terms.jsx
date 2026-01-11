@@ -37,7 +37,7 @@ const Terms = () => {
 
                         <h3 className="heading h4" style={{ marginTop: '30px', marginBottom: '15px' }}>6. Contact Us</h3>
                         <p style={{ marginBottom: '20px' }}>
-                            In order to resolve a complaint regarding the Site or to receive further information regarding use of the Site, please contact us at <a href="mailto:legal@nexora.com" style={{ color: '#3b82f6' }}>legal@nexora.com</a>.
+                            In order to resolve a complaint regarding the Site or to receive further information regarding use of the Site, please contact us at <a href="mailto:help@nexora-digital.in" style={{ color: '#3b82f6' }}>help@nexora-digital.in</a>.
                         </p>
                     </div>
                 </div>

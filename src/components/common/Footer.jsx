@@ -60,9 +60,9 @@ const Footer = () => {
                     </p>
                     <div className="social-icons-wrapper">
                         {/* Social Icons */}
-                        <a href="#" className="social-link">LinkedIn</a>
-                        <a href="#" className="social-link">Twitter</a>
-                        <a href="#" className="social-link">Instagram</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" className="social-link">LinkedIn</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" className="social-link">Twitter</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" className="social-link">Instagram</a>
                     </div>
                 </div>
 

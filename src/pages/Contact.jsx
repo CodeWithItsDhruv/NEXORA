@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import PageHero from '../components/common/PageHero';
 import emailjs from '@emailjs/browser';
+import SEO from '../components/common/SEO';
 
 const Contact = () => {
     const form = useRef();
@@ -36,6 +37,10 @@ const Contact = () => {
                 subtitle="Ready to scale your business? Let's talk about your goals and how we can help you hit them."
                 breadcrumb="Home / Company / Contact"
             />
+            <SEO
+                title="Contact Nexora | Let's Grow Your Business"
+                description="Get in touch with Nexora for digital marketing services in Vadodara. Call us or send a message to start scaling your business."
+            />
 
             <div className="section">
                 <div className="container w-container">
@@ -55,7 +60,7 @@ const Contact = () => {
                                     </div>
                                     <div>
                                         <h4 className="heading h5" style={{ margin: 0 }}>Email</h4>
-                                        <a href="mailto:hello@nexora.com" style={{ color: '#64748b', textDecoration: 'none', fontSize: '16px' }}>hello@nexora.com</a>
+                                        <a href="mailto:help@nexora-digital.in" style={{ color: '#64748b', textDecoration: 'none', fontSize: '16px' }}>help@nexora-digital.in</a>
                                     </div>
                                 </div>
 
@@ -65,7 +70,7 @@ const Contact = () => {
                                     </div>
                                     <div>
                                         <h4 className="heading h5" style={{ margin: 0 }}>Phone</h4>
-                                        <a href="tel:+919876543210" style={{ color: '#64748b', textDecoration: 'none', fontSize: '16px' }}>+91 98765 43210</a>
+                                        <a href="tel:+919904256613" style={{ color: '#64748b', textDecoration: 'none', fontSize: '16px' }}>+91 99042 56613</a>
                                     </div>
                                 </div>
 
@@ -75,7 +80,7 @@ const Contact = () => {
                                     </div>
                                     <div>
                                         <h4 className="heading h5" style={{ margin: 0 }}>Office</h4>
-                                        <p style={{ color: '#64748b', margin: 0, fontSize: '16px' }}>Nexora HQ, Tech Park<br />Mumbai, India</p>
+                                        <p style={{ color: '#64748b', margin: 0, fontSize: '16px' }}>FF-26, A-1 Tower Sunmelon Shops & Flats,<br />Near Vekunth-1, Waghodia Chowkdi,<br />Vadodara - 390019</p>
                                     </div>
                                 </div>
                             </div>
@@ -102,7 +107,7 @@ const Contact = () => {
                                     </div>
                                     <div style={{ marginBottom: '20px' }}>
                                         <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500', fontSize: '14px', color: '#334155' }}>Phone Number</label>
-                                        <input type="tel" name="contact_number" className="text-field w-input" placeholder="+91 98765 43210" style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #cbd5e1' }} />
+                                        <input type="tel" name="contact_number" className="text-field w-input" placeholder="+91 99042 56613" style={{ width: '100%', padding: '12px 16px', borderRadius: '8px', border: '1px solid #cbd5e1' }} />
                                     </div>
                                     <div style={{ marginBottom: '20px' }}>
                                         <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500', fontSize: '14px', color: '#334155' }}>Company Name</label>

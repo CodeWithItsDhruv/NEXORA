@@ -6318,3 +6318,9 @@ html {
         grid-template-columns: 1fr;
     }
 }
+
+/* Early Offer Section Background Fix */
+.early-offer-section {
+    background-color: #10212e !important;
+    color: #ffffff !important;
+}

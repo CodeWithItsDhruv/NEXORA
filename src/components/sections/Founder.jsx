@@ -8,7 +8,7 @@ const Founder = () => {
 
                     {/* Image Column (Left) - Constrained Width */}
                     <div className="image-wrapper" data-aos="fade-right" style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.08)', maxWidth: '450px', width: '100%', margin: '0 auto' }}>
-                        <img src="/assets/founder.png" alt="Nexora Founder" style={{ width: '100%', height: 'auto', display: 'block' }} />
+                        <img src="/assets/founder.jpeg" alt="Nexora Founder" style={{ width: '100%', height: 'auto', display: 'block' }} />
                     </div>
 
                     {/* Text Column (Right) */}
@@ -17,15 +17,15 @@ const Founder = () => {
                         <h2 className="heading h1" style={{ fontFamily: '"Outfit", sans-serif' }}>Meet the Mind Behind Nexora</h2>
                         <div className="spacer _24"></div>
                         <p className="paragraph large">
-                            Nexora was created by a digital marketing professional with a clear focus on helping real estate businesses grow online in a practical and transparent way.
+                            Nexora was founded by Dhruv Patel, a digital marketing professional based in Vadodara, with a clear mission to help businesses achieve sustainable growth through strategic, data-driven solutions.
                         </p>
                         <div className="spacer _16"></div>
                         <p className="paragraph">
-                            After studying how buyers search for properties, compare projects, and make decisions online, Nexora was built to bridge the gap between visibility and real leads. This is not an agency built on shortcuts or templates. It is built on learning, testing, and improving strategies that actually work for real estate marketing.
+                            Specializing in SEO, performance marketing, and content strategy, Nexora bridges the gap between online visibility and real business results. We move beyond generic templates, focusing instead on deep research, audience analysis, and continuous optimization to create campaigns that truly convert.
                         </p>
                         <div className="spacer _16"></div>
                         <p className="paragraph">
-                            Every project is handled with personal involvement, attention to detail, and a long-term growth mindset.
+                            We believe in personal attention and transparent communication. Our goal is not just short-term wins, but building a strong digital foundation that helps your business thrive in an evolving landscape.
                         </p>
                     </div>
 
