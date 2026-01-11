@@ -6,7 +6,7 @@ const PreFooterCTA = () => {
             <div className="container w-container">
                 <div className="contact-card">
                     <img
-                        src="/assets/qr%20(2).png"
+                        src="/assets/wp-qr.png"
                         loading="lazy"
                         alt="WhatsApp QR Code"
                         className="contact-us-ticket"

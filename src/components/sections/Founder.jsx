@@ -8,7 +8,7 @@ const Founder = () => {
 
                     {/* Image Column (Left) - Constrained Width */}
                     <div className="image-wrapper" data-aos="fade-right" style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.08)', maxWidth: '450px', width: '100%', margin: '0 auto' }}>
-                        <img src="/assets/founder.jpeg" alt="Nexora Founder" style={{ width: '100%', height: 'auto', display: 'block' }} />
+                        <img src="/assets/founder.jpeg" loading="lazy" alt="Nexora Founder" style={{ width: '100%', height: 'auto', display: 'block' }} />
                     </div>
 
                     {/* Text Column (Right) */}

@@ -6324,3 +6324,32 @@ html {
     background-color: #10212e !important;
     color: #ffffff !important;
 }
+
+/* Banner Animation */
+@keyframes nexoraScroll {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+.banner-text-block {
+    display: block !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    width: 100% !important;
+    position: relative !important;
+}
+
+.banner-text {
+    display: inline-block !important;
+    margin: 0 !important;
+    /* Start with padding equal to parent width so it acts as offset */
+    padding-left: 100%;
+    /* Animate element to the left by its full width (padding + content) */
+    animation: nexoraScroll 30s linear infinite !important;
+    will-change: transform;
+}
